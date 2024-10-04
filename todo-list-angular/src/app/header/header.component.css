@@ -1,0 +1,26 @@
+/* Estilo para el contenedor del nav */
+nav {
+    background-color: #d88705; /* Fondo del nav */
+    padding: 10px 20px; /* Espaciado interno del nav */
+  }
+  
+  /* Estilo para la lista desordenada dentro del nav */
+  nav ul {
+    list-style-type: none; /* Eliminar los puntos de la lista */
+    margin: 0; /* Eliminar márgenes */
+    padding: 0; /* Eliminar relleno */
+    display: flex; /* Hacer que los elementos de la lista se alineen horizontalmente */
+  }
+  
+  /* Estilo para cada elemento de la lista */
+  nav ul li {
+    color: white;
+    margin: 0 15px; /* Espacio entre los elementos de la lista */
+  }
+  
+  /* Estilo para los enlaces cuando se pasa el ratón por encima */
+  nav ul li:hover {
+    background-color: #ffffff; /* Color de fondo al pasar el ratón */
+    color: #d88705;
+    border-radius: 5px; /* Bordes redondeados */
+  }
