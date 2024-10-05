@@ -1,3 +1,11 @@
+#TODO
+
+Modificar tareas
+Las tareas tienen que tener 3 atributos (por lo menos )
+Estilos decentes
+
+
+
 # TodoListAngular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.6.
