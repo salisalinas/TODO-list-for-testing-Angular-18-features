@@ -1,6 +1,6 @@
 /* Estilo para el contenedor del nav */
 nav {
-    background-color: #d88705; /* Fondo del nav */
+    background-color: #113545; /* Fondo del nav */
     padding: 10px 20px; /* Espaciado interno del nav */
   }
   
@@ -14,13 +14,14 @@ nav {
   
   /* Estilo para cada elemento de la lista */
   nav ul li {
-    color: white;
+    color: #d1cdcd;
     margin: 0 15px; /* Espacio entre los elementos de la lista */
   }
   
   /* Estilo para los enlaces cuando se pasa el ratón por encima */
   nav ul li:hover {
-    background-color: #ffffff; /* Color de fondo al pasar el ratón */
-    color: #d88705;
+    background-color: #2a5568; /* Color de fondo al pasar el ratón */
+    color: #b1c57e;
     border-radius: 5px; /* Bordes redondeados */
   }
+

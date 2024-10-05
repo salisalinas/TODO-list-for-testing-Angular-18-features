@@ -1,12 +1,13 @@
 import { Component ,OnInit, ViewChild, ElementRef} from '@angular/core';
 import { CommonModule } from '@angular/common';
-type TodoItem = { id: number; task: string; completed: boolean };
+import { TodoFormComponent } from '../todo-form/todo-form.component';
+import TodoItem from '../../interfaces/todoItem.interface';
 
 
 @Component({
   selector: 'app-todo-list',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,TodoFormComponent],
   templateUrl: './todo-list.component.html',
   styleUrl: './todo-list.component.css'
 })
@@ -14,8 +15,7 @@ type TodoItem = { id: number; task: string; completed: boolean };
 
 export class TodoListComponent {
   todoList: TodoItem[] = [];
-  newTask: string = '';
-  @ViewChild('todoText') todoInputRef: ElementRef<HTMLInputElement> = null!;
+
 
   constructor() { }
 
@@ -34,8 +34,8 @@ export class TodoListComponent {
               completed: false
           };
           this.todoList.push(newTodoItem);
-          this.todoInputRef.nativeElement.value = '';
           this.saveTodoList();
+          console.log('Updated todo list:', this.todoList);
       }
   }
 

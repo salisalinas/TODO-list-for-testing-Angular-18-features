@@ -1,7 +1,8 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    background: rgb(169,212,209);
+    background: linear-gradient(90deg, rgba(169,212,209,1) 0%, rgba(126,240,230,1) 49%, rgba(42,189,222,1) 80%);
     margin: 10px;
     padding: 10px;
   }
@@ -17,3 +18,4 @@ body {
   h1 {
     color: #333;
   }
+  

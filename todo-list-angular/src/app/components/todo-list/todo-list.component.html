@@ -1,0 +1,14 @@
+<app-todo-form  (newTaskAdded)="addTask($event)"></app-todo-form>
+
+<ul>
+    <li *ngFor="let todoItem of todoList"  (click)="toggleCompleted(todoItem.id)">
+        <input
+            type="checkbox"
+            [(checked)]="todoItem.completed"
+            (change)="toggleCompleted(todoItem.id)"
+            class="form-check-input"
+        />
+        <span [class.completed]="todoItem.completed">{{ todoItem.task }}</span>
+        <button (click)="deleteTask(todoItem.id)" class="close">Borrar</button>
+    </li>
+</ul>
