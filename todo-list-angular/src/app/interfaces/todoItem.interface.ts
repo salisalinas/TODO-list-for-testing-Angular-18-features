@@ -1,5 +1,6 @@
 export default interface TodoItem {
-  id: number;
-  task: string;
+  id?: number;
+  name:string;
+  description: string;
   completed: boolean;
 }

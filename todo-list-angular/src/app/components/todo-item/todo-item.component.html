@@ -1,1 +1,7 @@
-<p>todo-item works!</p>
+<div *ngIf="todoItem$ | async as todoItem">
+  <li>
+    <span>{{ todoItem.name }} - {{ todoItem.description }}</span>
+    <button (click)="todoService.updateItem(todoItem.id!, {name: todoItem.name + ' (actualizado)'})">Actualizar</button>
+    <button (click)="todoService.deleteItem(todoItem.id!)">Eliminar</button>
+  </li>
+</div>
