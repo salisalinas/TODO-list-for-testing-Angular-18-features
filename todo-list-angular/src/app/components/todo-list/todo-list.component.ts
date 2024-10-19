@@ -16,50 +16,37 @@ import TodoItem from '../../interfaces/todoItem.interface';
 
 
 export class TodoListComponent {
-  todoList: TodoItem[] = [];
+    todoList$!: Observable<TodoItem[]>;
 
 
   constructor(private todoService: TodoService) { }
 
   ngOnInit(): void {
-    //   const storedTodoList = localStorage.getItem('todoList');
-    //   if (storedTodoList) {
-    //       this.todoList = JSON.parse(storedTodoList);
-    //   }
-    this.todoService.getItems();
+    this.todoList$ = this.todoService.getItems();
   }
 
-//   addTask(text: string): void {
-//       if (text.trim() !== '') {
-//           const newTodoItem: TodoItem = {
-//               id: Date.now(),
-//               name: '',
-//               description:'',
-//               completed: false
-//           };
-//         //   this.todoList.push(newTodoItem);
-//         //   this.saveTodoList();
-//         //   console.log('Updated todo list:', this.todoList);
-//         this.todoService.addItem(newTodoItem);
-//       }
-//   }
+  addTask(text: string): void {
+      if (text.trim() !== '') {
+          const newTodoItem: TodoItem = {
+              id: Date.now().toString(),
+              name: '',
+              description:'',
+              completed: false
+          };
+        this.todoService.addItem(newTodoItem);
+      }
+  }
 
-//   deleteTask(id: number): void {
-//     //   this.todoList = this.todoList.filter(item => item.id !== id);
-//     //   this.saveTodoList();
-//     this.todoService.deleteItem(this.id);
-//   }
-
-  toggleCompleted(id: number): void {
-      const todoItem = this.todoList.find(item => item.id === id);
+ /* toggleCompleted(id: number): void {
+      const todoItem = this.todoList$.find(item => item.id === id);
       if (todoItem) {
           todoItem.completed = !todoItem.completed;
           this.saveTodoList();
       }
   }
-
+*/
   saveTodoList(): void {
-      localStorage.setItem('todoList', JSON.stringify(this.todoList));
+      localStorage.setItem('todoList', JSON.stringify(this.todoList$));
   }
 }
 

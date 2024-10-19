@@ -19,7 +19,7 @@ export class TodoFormComponent {
     if (this.newTask.trim() !== '') {
       this.newTaskAdded.emit(this.newTask);
       await this.todoService.addItem({
-        id: Date.now(),
+        id: Date.now().toString(),
         name: this.newTask,
         description: this.newDescription,
         completed: false,
