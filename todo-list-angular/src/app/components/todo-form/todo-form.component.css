@@ -1,5 +1,8 @@
+form {
+  background-color: #bae5bc;
+}
 div {
-    display: flex;
+    display: flexbox;
     margin-bottom: 1rem;
   }
   
@@ -9,6 +12,7 @@ div {
     font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 4px 0 0 4px;
+    width:100%;
   }
   
   button {

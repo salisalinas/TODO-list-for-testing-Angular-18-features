@@ -1,5 +1,11 @@
-<div>
-    <input type="text" [(ngModel)]="newTask" placeholder="Añadir tarea" (keyup.enter)="addTask()">
-    <input type="text" [(ngModel)]="newDescription" placeholder="Descripción" (keyup.enter)="addTask()">
-    <button (click)="addTask()">OK</button>
+<form (ngSubmit)="addTask()">
+  <div>
+    <label for="formName">Título:</label>
+    <input type="text" id="formName" [(ngModel)]="formName" (keyup.enter)="addTask()" required [ngModelOptions]="{standalone: true}">
   </div>
+  <div>
+  <label for="formDescription">Descripción:</label>
+    <input type="text" [(ngModel)]="formDescription" (keyup.enter)="addTask()" [ngModelOptions]="{standalone: true}">
+  </div>
+  <button type="submit">OK</button>
+</form>
